@@ -1,0 +1,58 @@
+<form [formGroup]="addChildForm" (ngSubmit)="onSubmit()" class = "add-child-form" >
+
+    <h2>Register your kids here!</h2>
+    <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name" formControlName="name">
+        <mat-error *ngIf="addChildForm.get('name').errors?.['required']">
+        Name is required.
+        </mat-error>
+        <mat-error *ngIf="addChildForm.get('name').errors?.['invalidCharacters']">
+            Only letters are allowed.
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Kindergarten</mat-label>
+        <mat-select formControlName="kindergardenId">
+            <mat-option *ngFor="let kindergarden of storeService.kindergardens" [value]="kindergarden.id">
+                {{ kindergarden.name }}, {{ kindergarden.address }}
+            </mat-option>
+        </mat-select>
+        <mat-error *ngIf="addChildForm.get('kindergardenId').hasError('required')">
+            Kindergarten selection is required.
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Birthdate</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="birthDate">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="addChildForm.get('birthDate').hasError('required')">
+            Birthdate is required.
+        </mat-error>
+        <mat-error *ngIf="addChildForm.get('birthDate').hasError('futureDate')">
+            The date cannot be in the future.
+        </mat-error>
+    </mat-form-field>
+
+
+    <button mat-raised-button color="primary" type="submit" >
+        Submit
+    </button>
+</form>
+
+
+<div class="modal fade" id="bootstrapModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Message</h5>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

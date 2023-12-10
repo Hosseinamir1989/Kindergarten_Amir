@@ -1,0 +1,81 @@
+button.active {
+    background-color: #483243; /* Harmonized with the table header */
+    color: white;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    th, td {
+        border: 1px solid #bbb; /* A lighter border to better match the gradient */
+        padding: 8px;
+        text-align: left;
+        background-color: #FFF3F8; /* White for contrast and readability */
+        color: #333; /* Dark text for readability */
+    }
+
+    th {
+        background-color: #483243; /* A softer blue to complement #93A5CF */
+        color: white; /* White text for contrast */
+    }
+
+    tr:nth-child(even) {
+        background-color: #D7E2DF; /* A light, muted color to complement #E4EfE9 */
+    }
+}
+@media only screen and (min-width: 961px) {
+    table {
+
+        th, td {
+            font-size: 16px;
+            padding: 12px;
+        }
+    }
+}
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+
+}
+.pagination\:number {
+    --size: 32px;
+    --margin: 6px;
+    margin: 0 var(--margin);
+    border-radius: 6px;
+    background: #202020;
+    min-width: var(--size);
+    height: var(--size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0 6px;
+    @media (hover: hover) {
+
+    }
+
+    button {
+        padding: 10px 15px;
+        margin: 0 5px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        background-color: #f0f0f0;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background: lighten(#202020, 3%);
+        }
+
+        &.active {
+            background-color: tan;
+            color: white;
+
+        }
+    }
+
+}

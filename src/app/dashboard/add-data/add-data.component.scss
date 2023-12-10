@@ -1,0 +1,36 @@
+
+.add-child-form {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  background: #684184;
+  box-shadow: 0 4px 10px #684184;
+
+
+  @media only screen and (min-width: 200px) and (max-width: 1024px) {
+
+  }
+  .form-title {
+    text-align: center;
+    color: #684184;
+    margin-bottom: 30px;
+  }
+
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+
+    &.mat-focused .mat-form-field-ripple {
+      background-color: #684184;
+    }
+  }
+
+  button {
+    width: 100%;
+    box-shadow: 0 2px 5px #684184;
+    &:hover {
+      background-color: #684184;
+    }
+  }
+}

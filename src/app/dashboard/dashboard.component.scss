@@ -1,0 +1,22 @@
+
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+
+}
+.app-data, .app-button, .app-add-data {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+

@@ -1,0 +1,16 @@
+<div class="dashboard-container">
+    <mat-card>
+        <app-data [currentPage]="currentPage" (selectPageEvent)="receiveMessage($event)"></app-data>
+    </mat-card>
+
+    <button mat-raised-button color="accent" (click)="toggleAddDataVisibility()">
+        {{ isFormVisible ? 'Hide Form' : 'Show Form' }}
+    </button>
+
+    <mat-card *ngIf="isFormVisible">
+        <app-add-data [currentPage]="currentPage"></app-add-data>
+    </mat-card>
+    <mat-card *ngIf="formVisibility === 'visible'">
+        <app-add-data [currentPage]="currentPage"></app-add-data>
+    </mat-card>
+</div>
