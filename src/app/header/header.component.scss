@@ -29,7 +29,7 @@ img {
 }
 
 a {
-  color: black; // Use your theme color
+  color: black;
   text-decoration: none;
   padding: 5px 10px;
   border-radius: 4px;
@@ -75,7 +75,7 @@ mat-toolbar {
   flex: 1;
 }
 mat-icon-button {
-  margin-left: auto; /* Pushes the button to the far right */
+  margin-left: auto;
 }
 body {
   overflow-x: hidden;

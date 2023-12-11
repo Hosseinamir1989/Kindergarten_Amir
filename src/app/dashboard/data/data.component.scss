@@ -1,25 +1,25 @@
 button.active {
-    background-color: #483243; /* Harmonized with the table header */
+    background-color: #483243;
     color: white;
 }
 table {
     width: 100%;
     border-collapse: collapse;
     th, td {
-        border: 1px solid #bbb; /* A lighter border to better match the gradient */
+        border: 1px solid #bbb;
         padding: 8px;
         text-align: left;
-        background-color: #FFF3F8; /* White for contrast and readability */
-        color: #333; /* Dark text for readability */
+        background-color: #FFF3F8;
+        color: #333;
     }
 
     th {
-        background-color: #483243; /* A softer blue to complement #93A5CF */
-        color: white; /* White text for contrast */
+        background-color: #483243;
+        color: white;
     }
 
     tr:nth-child(even) {
-        background-color: #D7E2DF; /* A light, muted color to complement #E4EfE9 */
+        background-color: #D7E2DF;
     }
 }
 @media only screen and (min-width: 961px) {
