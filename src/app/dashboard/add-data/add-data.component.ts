@@ -5,7 +5,6 @@ import { BackendService } from 'src/app/shared/backend.service';
 import { StoreService } from 'src/app/shared/store.service';
 
 
-import {ErrorDialogComponent} from "../../error-dialog/error-dialog.component";
 
 
 declare var bootstrap: any;

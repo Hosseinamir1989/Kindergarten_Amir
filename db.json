@@ -35,6 +35,12 @@
       "kindergardenId": 1,
       "birthDate": "2023-12-09T23:00:00.000Z",
       "id": "5LSux4L"
+    },
+    {
+      "name": "hello there",
+      "kindergardenId": 2,
+      "birthDate": "2023-12-09T23:00:00.000Z",
+      "id": "3ATXgvS"
     }
   ],
   "kindergardens": [
