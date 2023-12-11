@@ -29,6 +29,7 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
 import { MatMenuModule } from '@angular/material/menu';
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import { ErrorDialogComponent } from './error-dialog/error-dialog.component';
+import { AboutPageComponent } from './about-page/about-page.component';
 
 
 
@@ -44,7 +45,7 @@ import { ErrorDialogComponent } from './error-dialog/error-dialog.component';
     PaginationPipe,
     ConfirmDialogComponent,
     ErrorDialogComponent,
-
+    AboutPageComponent
   ],
   imports: [
     BrowserModule,

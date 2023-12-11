@@ -1,12 +1,6 @@
 {
   "childs": [
     {
-      "id": "_iL77oo",
-      "name": "Viktor Sachs 3",
-      "birthDate": "2022-06-04",
-      "kindergardenId": 4
-    },
-    {
       "name": "Heidi aus den Bergen 9",
       "kindergardenId": 2,
       "birthDate": "2023-10-05",
@@ -37,64 +31,10 @@
       "id": "OSpkKES"
     },
     {
-      "name": "dfdf",
-      "kindergardenId": 4,
-      "birthDate": "2023-12-01T23:00:00.000Z",
-      "id": "LuI_g5q"
-    },
-    {
-      "name": "rdfsdf",
-      "kindergardenId": 5,
-      "birthDate": "2023-11-09T23:00:00.000Z",
-      "id": "iLpQ8f2"
-    },
-    {
-      "name": "ssds",
-      "kindergardenId": 4,
-      "birthDate": "2023-11-30T23:00:00.000Z",
-      "id": "FVeOB59"
-    },
-    {
-      "name": "ycyxc",
-      "kindergardenId": 5,
-      "birthDate": "2023-12-28T23:00:00.000Z",
-      "id": "hFaEw_8"
-    },
-    {
-      "name": "dfdfs",
-      "kindergardenId": 4,
-      "birthDate": "2023-12-29T23:00:00.000Z",
-      "id": "dJRp5wS"
-    },
-    {
-      "name": "dfdfs",
-      "kindergardenId": 4,
-      "birthDate": "2023-12-29T23:00:00.000Z",
-      "id": "vb1Hzqc"
-    },
-    {
-      "name": "hjghjgh",
-      "kindergardenId": 4,
-      "birthDate": "2023-12-05T23:00:00.000Z",
-      "id": "dL8Bgln"
-    },
-    {
-      "name": "pppoo",
-      "kindergardenId": 5,
-      "birthDate": "2023-12-03T23:00:00.000Z",
-      "id": "cgGz-cy"
-    },
-    {
-      "name": "fgfg",
-      "kindergardenId": 5,
-      "birthDate": "2023-12-03T23:00:00.000Z",
-      "id": "mZz6Guo"
-    },
-    {
-      "name": "fgfg",
-      "kindergardenId": 5,
-      "birthDate": "2023-12-03T23:00:00.000Z",
-      "id": "hP1P5BJ"
+      "name": "elsa",
+      "kindergardenId": 1,
+      "birthDate": "2023-12-09T23:00:00.000Z",
+      "id": "5LSux4L"
     }
   ],
   "kindergardens": [
