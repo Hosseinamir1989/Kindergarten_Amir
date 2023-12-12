@@ -1,3 +1,7 @@
+
+
+
+
 <table class="table table-striped table-hover">
     <thead>
     <tr>
@@ -24,10 +28,12 @@
 </table>
 
 <div class="pagination-container">
-    <mat-button-toggle-group #group="matButtonToggleGroup" (change)="selectPage(group.value)" aria-label="Pagination">
-        <mat-button-toggle *ngFor="let page of returnAllPages() | pagination" [value]="page" [checked]="page === currentPage">
-            {{ page }}
-        </mat-button-toggle>
-    </mat-button-toggle-group>
+    <mat-paginator
+            [length]="storeService.childrenTotalCount"
+            [pageSize]="CHILDREN_PER_PAGE"
+            [pageIndex]="currentPage"
+            (page)="selectPage($event.pageIndex)"
+    ></mat-paginator>
+
 </div>
 

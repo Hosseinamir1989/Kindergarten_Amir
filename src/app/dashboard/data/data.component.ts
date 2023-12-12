@@ -59,5 +59,7 @@ export class DataComponent implements OnInit {
       }
     });
   }
+
+  protected readonly CHILDREN_PER_PAGE = CHILDREN_PER_PAGE;
 }
 
