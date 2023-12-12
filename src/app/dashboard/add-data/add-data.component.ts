@@ -16,7 +16,6 @@ declare var bootstrap: any;
 export class AddDataComponent implements OnInit {
   public addChildForm: any;
   @Input() currentPage!: number;
-  public errorMessage: string = '';
   public modalMessage: string = '';
   constructor(private formbuilder: FormBuilder, public dialog: MatDialog, public storeService: StoreService, public backendService: BackendService) { }
 
@@ -75,8 +74,5 @@ export class AddDataComponent implements OnInit {
       return date <= today ? null : { 'futureDate': { value: control.value }};
     };
   }
-  private refreshTableData(): void {
-    // Assuming you have a method to fetch children data
-    this.backendService.getChildren(this.currentPage);
-  }
+
 }
