@@ -1,0 +1,74 @@
+.info-page {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+
+.kindergarten-section {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+.kindergarten-section h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.kindergarten-section h3 {
+  color: #555;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.kindergarten-section p {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+
+.kindergarten-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.kindergarten-section ul li {
+  margin-bottom: 5px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.kindergarten-section ul li:before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #007bff;
+}
+
+
+.kindergarten-section img {
+  width: 100%;
+  height: auto;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  .info-page {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .kindergarten-section h2 {
+    font-size: 20px;
+  }
+
+  .kindergarten-section h3 {
+    font-size: 16px;
+  }
+}

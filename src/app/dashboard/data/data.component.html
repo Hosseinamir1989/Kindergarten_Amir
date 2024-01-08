@@ -1,15 +1,22 @@
-
-
-
-
-<table class="table table-striped table-hover">
+<mat-form-field appearance="outline" class="kindergarten-filter">
+    <mat-label>filter by kindergarten</mat-label>
+    <mat-select (selectionChange)="onKindergartenChange($event.value)">
+        <mat-option value="">All Kindergartens</mat-option>
+        <mat-option *ngFor="let kindergarten of storeService.kindergardens" [value]="kindergarten.id">
+            {{ kindergarten.name }}, {{ kindergarten.address }}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+<div class = "table-responsive">
+<table class="table table-striped table-bordered" >
     <thead>
     <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Kindergarten</th>
-        <th scope="col">Address</th>
-        <th scope="col">Age</th>
-        <th scope="col">Birthdate</th>
+        <th scope="col" class="sortable" [class.sorted]="sortColumn === 'name'" (click)="onSort('name')">Name</th>
+        <th scope="col" class="sortable" [class.sorted]="sortColumn === 'kindergarden.name'" (click)="onSort('kindergarden.name')">Kindergarten</th>
+        <th scope="col" >Address</th>
+        <th scope="col" >Age</th>
+        <th scope="col" >Birthdate</th>
+        <th scope="col" class="sortable" [class.sorted]="sortColumn === 'registrationDate'" (click)="onSort('registrationDate')">Registration Date</th>
         <th scope="col"></th>
     </tr>
     </thead>
@@ -20,20 +27,26 @@
         <td>{{ child.kindergarden.address }}</td>
         <td>{{ getAge(child.birthDate) }}</td>
         <td>{{ child.birthDate | date:'longDate' }}</td>
+        <td>{{ child.registrationDate | date:'longDate' }}</td>
+
         <td>
-            <button class="btn btn-danger btn-sm" (click)="cancelRegistration(child.id)">Unsubscribe child</button>
+            <button class="btn btn-danger btn-sm" (click)="cancelRegistration(child.id)" [disabled]="isLoading">Deregister child
+                <span *ngIf="!isLoading"></span>
+                <div *ngIf="isLoading" class="spinner-border spinner-border-sm text-light" role="status">
+                    <span class="sr-only"></span>
+                </div>
+            </button>
         </td>
     </tr>
     </tbody>
 </table>
-
+</div>
 <div class="pagination-container">
     <mat-paginator
             [length]="storeService.childrenTotalCount"
-            [pageSize]="CHILDREN_PER_PAGE"
+            [pageSize]="storeService.childrenTotalCount"
             [pageIndex]="currentPage"
             (page)="selectPage($event.pageIndex)"
     ></mat-paginator>
 
 </div>
-

@@ -1,11 +1,10 @@
 
 .add-child-form {
   max-width: 500px;
-  margin: 20px auto;
   padding: 20px;
-  border-radius: 8px;
-  background: #684184;
-  box-shadow: 0 4px 10px #684184;
+  border-radius: 10px;
+  background: #a0d2eb;
+  box-shadow: 0 4px 10px #a0d2eb;
 
 
   @media only screen and (min-width: 200px) and (max-width: 1024px) {
@@ -13,7 +12,7 @@
   }
   .form-title {
     text-align: center;
-    color: #684184;
+    color: #e5eaf5;
     margin-bottom: 30px;
   }
 
@@ -22,15 +21,15 @@
     margin-bottom: 20px;
 
     &.mat-focused .mat-form-field-ripple {
-      background-color: #684184;
+      background-color: #e5eaf5;
     }
   }
 
   button {
     width: 100%;
-    box-shadow: 0 2px 5px #684184;
+    box-shadow: 0 2px 5px #a0d2eb;
     &:hover {
-      background-color: #684184;
+      background-color: #a28089;
     }
   }
 }

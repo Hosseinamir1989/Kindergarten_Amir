@@ -4,6 +4,7 @@ import { Kindergarden } from './interfaces/Kindergarden';
 import { StoreService } from './store.service';
 import { Child, ChildResponse } from './interfaces/Child';
 import { CHILDREN_PER_PAGE } from './constants';
+import {map, Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -37,4 +38,10 @@ export class BackendService {
         this.getChildren(page);
       })
     }
-  }
+
+    getChildrenFilteredByKindergarten(currentPage: number, selectedKindergarten: string):Observable<Child[]> {
+      return this.http.get<Child[]>(`http://localhost:5000/childs?_expand=kindergarden&kindergardenId=${selectedKindergarten}&_page=${currentPage}&_limit=${CHILDREN_PER_PAGE}`)
+          .pipe(map(response => response as Child[]));
+
+    }
+}

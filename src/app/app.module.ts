@@ -29,6 +29,8 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
 import { MatMenuModule } from '@angular/material/menu';
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import { AboutPageComponent } from './about-page/about-page.component';
+import {MatSortModule} from "@angular/material/sort";
+import { InfoPageComponent } from './info-page/info-page.component';
 
 
 
@@ -43,35 +45,37 @@ import { AboutPageComponent } from './about-page/about-page.component';
     HeaderComponent,
     PaginationPipe,
     ConfirmDialogComponent,
-    AboutPageComponent
+    AboutPageComponent,
+    InfoPageComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatSlideToggleModule,
-    MatToolbarModule,
-    MatButtonModule,
-    ButtonComponent,
-    BrowserAnimationsModule,
-    MatIconModule,
-    MatCardModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSelectModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatInputModule,
-    MatDialogModule,
-    MatMenuModule,
-    MatButtonToggleModule,
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatSlideToggleModule,
+        MatToolbarModule,
+        MatButtonModule,
+        ButtonComponent,
+        BrowserAnimationsModule,
+        MatIconModule,
+        MatCardModule,
+        MatInputModule,
+        MatFormFieldModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatSelectModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatInputModule,
+        MatDialogModule,
+        MatMenuModule,
+        MatButtonToggleModule,
+        MatSortModule,
 
 
-  ],
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

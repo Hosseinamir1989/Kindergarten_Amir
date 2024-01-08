@@ -8,7 +8,7 @@ import { Child, ChildResponse } from './interfaces/Child';
 export class StoreService {
 
   constructor() { }
-
+  public filteredChildren: Child[] = [];
   public kindergardens: Kindergarden[] = [];
   public children: ChildResponse[] = []
   public childrenTotalCount: number = 0;

@@ -1,52 +1,62 @@
-button.active {
-    background-color: #483243;
-    color: white;
-}
 table {
+    background-color: transparent;
     width: 100%;
     border-collapse: collapse;
-    th, td {
-        border: 1px solid #bbb;
-        padding: 8px;
-        text-align: left;
-        background-color: #FFF3F8;
-        color: #333;
-    }
-
-    th {
-        background-color: #483243;
-        color: white;
-    }
-
-    tr:nth-child(even) {
-        background-color: #D7E2DF;
-    }
 }
-@media only screen and (min-width: 961px) {
-    table {
 
+ td {
+    border: 1px solid #bbb;
+    padding: 8px;
+    text-align: left;
+    background-color: transparent;
+    color: black;
+}
+
+th {
+    background-color: #e5eaf5;
+    color: black;
+
+}
+
+th.sorted {
+    color: #ff5722;
+}
+
+tr:nth-child(even) {
+    background-color: #D7E2DF;
+}
+
+
+@media only screen and (max-width: 960px) {
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    table {
         th, td {
-            font-size: 16px;
-            padding: 12px;
+            font-size: 14px;
+            padding: 8px;
         }
     }
 }
+
 .pagination-container {
+    background-color: transparent;
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+}
+.kindergarten-filter{
 
+    display: block;
 }
 
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-
-}
 .pagination\:number {
+
     --size: 32px;
     --margin: 6px;
     margin: 0 var(--margin);
     border-radius: 6px;
-    background: #202020;
+    background: transparent;
     min-width: var(--size);
     height: var(--size);
     display: flex;
@@ -54,28 +64,23 @@ table {
     justify-content: center;
     cursor: pointer;
     padding: 0 6px;
-    @media (hover: hover) {
+}
 
-    }
+button {
 
-    button {
-        padding: 10px 15px;
-        margin: 0 5px;
-        border: 1px solid transparent;
-        border-radius: 4px;
-        background-color: #f0f0f0;
-        cursor: pointer;
-        transition: background-color 0.3s;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-        &:hover {
-            background: lighten(#202020, 3%);
-        }
+button:hover {
+    background: lighten(#202020, 3%);
+}
 
-        &.active {
-            background-color: tan;
-            color: white;
-
-        }
-    }
-
+button.active {
+    background-color: #e5eaf5;
+    color: #e5eaf5;
 }
