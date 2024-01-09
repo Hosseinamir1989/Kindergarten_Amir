@@ -50,7 +50,7 @@ export class DataComponent implements OnInit {
                 this.storeService.children = filteredChildren as any;
               },
               error => {
-                // Handle errors here
+                console.log("there is an Error while fetching data ")
               }
           );
     }
