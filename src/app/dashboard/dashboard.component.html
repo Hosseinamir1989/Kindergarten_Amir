@@ -1,16 +1,39 @@
-<div class="dashboard-container">
-    <mat-card>
-        <app-data [currentPage]="currentPage" (selectPageEvent)="receiveMessage($event)"></app-data>
-    </mat-card>
 
-    <button mat-raised-button color="accent" (click)="toggleAddDataVisibility()">
+<div class="registration-process">
+    <h2>Welcome to Our Kindergarten Registration</h2>
+    <p>Embarking on your child's educational journey is an exciting time, and we are thrilled that you are considering our kindergarten for this significant step. Our registration process is designed to be seamless and supportive, ensuring a smooth start to your child's learning adventure.</p>
+
+    <h3>Online Registration Form:</h3>
+    <p>Start by filling out our easy online registration form. Here, you'll provide essential details about your child, such as their name, birthdate, and any special needs or preferences.</p>
+
+    <h3>Kindergarten Selection:</h3>
+    <p>Choose from our list of affiliated kindergartens. We collaborate with a range of kindergartens, each offering unique programs and environments. Select the one that best fits your child's needs and your family's location.</p>
+
+    <h3>Subscription and Confirmation:</h3>
+    <p>Once you complete the form and select a kindergarten, proceed to the subscription stage. This step confirms your child's registration and secures their spot.</p>
+</div>
+
+<div class="dashboard-container">
+    <button class="button toggle-form-button" mat-raised-button color="accent" (click)="toggleAddDataVisibility()">
         {{ isFormVisible ? 'Hide Form' : 'Show Form' }}
     </button>
 
     <mat-card *ngIf="isFormVisible">
         <app-add-data [currentPage]="currentPage"></app-add-data>
     </mat-card>
-    <mat-card *ngIf="formVisibility === 'visible'">
-        <app-add-data [currentPage]="currentPage"></app-add-data>
+
+    <div class="registration-process">
+
+        <h3>Managing Your Child's Registration</h3>
+        <p>We understand that plans can change, and so might your preferences or needs. That's why our system is designed to be as adaptable as you are. Need to update your child's information? Or maybe you have to switch kindergartens? No problem! Our intuitive interface allows you to make those changes swiftly and securely.</p>
+
+        <h3>De-registration Process:</h3>
+        <p>While we'd be sad to see your child go, we've streamlined the de-registration process to be straightforward and stress-free. Should you need to cancel your child's registration for any reason, simply click the 'Deregister child' button corresponding to your child's name. Rest assured, you can always re-register should your circumstances allow it in the future.</p>
+
+        <h3>Your Data, Your Control:</h3>
+        <p>Every piece of information can be edited according to your current needs, ensuring your child's data is always up-to-date. Our platform puts you in control, allowing for real-time updates.</p>
+    </div>
+    <mat-card>
+        <app-data [currentPage]="currentPage" (selectPageEvent)="receiveMessage($event)"></app-data>
     </mat-card>
 </div>

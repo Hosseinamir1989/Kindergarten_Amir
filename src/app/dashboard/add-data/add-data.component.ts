@@ -3,7 +3,6 @@ import {FormBuilder, Validators, AbstractControl, ValidatorFn} from '@angular/fo
 import { MatDialog } from '@angular/material/dialog';
 import { BackendService } from 'src/app/shared/backend.service';
 import { StoreService } from 'src/app/shared/store.service';
-import {DatePipe} from "@angular/common";
 
 
 
@@ -12,8 +11,7 @@ declare var bootstrap: any;
 @Component({
   selector: 'app-add-data',
   templateUrl: './add-data.component.html',
-  styleUrls: ['./add-data.component.scss'],
-  providers: [DatePipe]
+  styleUrls: ['./add-data.component.scss']
 
 })
 export class AddDataComponent implements OnInit {
@@ -24,42 +22,38 @@ export class AddDataComponent implements OnInit {
   currentDate = new Date();
   public isLoading = false;
 
-  constructor(private formbuilder: FormBuilder, public dialog: MatDialog, public storeService: StoreService, public backendService: BackendService, private datePipe: DatePipe) {
+  constructor(private formbuilder: FormBuilder, public dialog: MatDialog, public storeService: StoreService, public backendService: BackendService) {
 
   }
 
   ngOnInit(): void {
     const today = new Date();
-    const datePipe = new DatePipe("en-IN")
 
     this.addChildForm = this.formbuilder.group({
-      name: ['', [Validators.required, this.lettersOnlyValidator()]], // Moved to sync validators
+      name: ['', [Validators.required, this.lettersOnlyValidator()]],
       kindergardenId: ['', Validators.required],
-      birthDate: [null, [Validators.required, this.pastDateValidator()]] // Moved to sync validators
+      birthDate: [null, [Validators.required, this.pastDateValidator()]]
     });
   }
 
   onSubmit(): void {
+    this.isLoading = true;
 
     if (this.addChildForm.valid) {
       const childDataWithRegistrationDate = {
         ...this.addChildForm.value,
         registrationDate: new Date()
       };
-
-
       this.backendService.addChildData(childDataWithRegistrationDate, this.currentPage);
-      this.isLoading = true;
-
       this.setModalMessage('Registration successful!');
       this.showModal();
-      this.isLoading = false;
-
       this.addChildForm.reset();
-
-
+    }else{
+      console.log("Error in submitting")
     }
+    this.isLoading = false;
   }
+
 
 
   setModalMessage(message: string): void {

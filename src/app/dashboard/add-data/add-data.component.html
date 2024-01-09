@@ -1,16 +1,17 @@
-<form [formGroup]="addChildForm" (ngSubmit)="onSubmit()" class = "add-child-form" >
-
+<form [formGroup]="addChildForm" (ngSubmit)="onSubmit()" class="add-child-form">
     <h2>Register your kid here!</h2>
+
     <mat-form-field appearance="fill">
         <mat-label>Name</mat-label>
         <input matInput placeholder="Name" formControlName="name">
         <mat-error *ngIf="addChildForm.get('name').errors?.['required']">
-        Name is required.
+            Name is required.
         </mat-error>
         <mat-error *ngIf="addChildForm.get('name').errors?.['invalidCharacters']">
             Only letters are allowed.
         </mat-error>
     </mat-form-field>
+
     <mat-form-field appearance="fill">
         <mat-label>Kindergarten</mat-label>
         <mat-select formControlName="kindergardenId">
@@ -22,6 +23,7 @@
             Kindergarten selection is required.
         </mat-error>
     </mat-form-field>
+
     <mat-form-field appearance="fill">
         <mat-label>Birthdate</mat-label>
         <input matInput [matDatepicker]="picker" formControlName="birthDate">
@@ -35,13 +37,24 @@
         </mat-error>
     </mat-form-field>
 
-
-    <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="isLoading" >
+    <button mat-raised-button color="primary" type="submit" [disabled]="isLoading">
         Submit
-        <div *ngIf="isLoading" class="spinner-border spinner-border-sm text-light" role="status">
-            <span class="sr-only"></span>
-        </div>
+        <mat-spinner *ngIf="isLoading" diameter="20"></mat-spinner>
     </button>
-
 </form>
 
+
+<div class="modal fade" id="bootstrapModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Message</h5>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

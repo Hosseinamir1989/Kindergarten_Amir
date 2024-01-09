@@ -44,7 +44,6 @@ export class DataComponent implements OnInit {
     if (newValue === "") {
       this.backendService.getChildren(this.currentPage);
     }else {
-      // Fetch children filtered by selected kindergarten
       this.backendService.getChildrenFilteredByKindergarten(this.currentPage, newValue)
           .subscribe(
               filteredChildren => {

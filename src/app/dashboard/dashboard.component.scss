@@ -1,4 +1,24 @@
+.registration-process {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+}
 
+.registration-process h3 {
+  color: #4a6572;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.registration-process p {
+  color: #626f78;
+  font-size: 16px;
+  line-height: 1.6;
+}
 
 .dashboard-container {
   background-color: #e5eaf5;
@@ -7,17 +27,38 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding: 10px;
+  box-sizing: border-box;
 }
 
-
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-
+.toggle-form-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #a0d2eb;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
-.app-data, .app-button, .app-add-data {
+
+.toggle-form-button:hover {
+  background-color: #89b9d0;
+}
+
+.mat-card {
   width: 100%;
   max-width: 800px;
   margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
-
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .dashboard-container {
+    padding: 20px;
+  }
+  .mat-card {
+    max-width: 90%;
+  }
+}

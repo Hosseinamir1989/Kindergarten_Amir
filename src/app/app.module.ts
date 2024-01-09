@@ -31,6 +31,7 @@ import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import { AboutPageComponent } from './about-page/about-page.component';
 import {MatSortModule} from "@angular/material/sort";
 import { InfoPageComponent } from './info-page/info-page.component';
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 
 
 
@@ -73,6 +74,7 @@ import { InfoPageComponent } from './info-page/info-page.component';
         MatMenuModule,
         MatButtonToggleModule,
         MatSortModule,
+        MatProgressSpinnerModule,
 
 
     ],

@@ -44,7 +44,7 @@
 <div class="pagination-container">
     <mat-paginator
             [length]="storeService.childrenTotalCount"
-            [pageSize]="storeService.childrenTotalCount"
+            [pageSize]="10"
             [pageIndex]="currentPage"
             (page)="selectPage($event.pageIndex)"
     ></mat-paginator>
